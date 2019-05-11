@@ -3,8 +3,10 @@ package com.tje.banklistfromserver;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import com.tje.banklistfromserver.databinding.ActivityMainBinding;
+import com.tje.banklistfromserver.util.ConnetctServer;
 
 public class MainActivity extends BaseActivity {
 
@@ -22,6 +24,12 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setupEvents() {
 
+        act.serverTestBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ConnetctServer.getRequestInfoBank(mContext, null);
+            }
+        });
     }
 
     @Override
