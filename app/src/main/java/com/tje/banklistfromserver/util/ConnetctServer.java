@@ -66,7 +66,7 @@ public class ConnetctServer {
                     JSONObject json = new JSONObject(responseContent);
 
                     if (handler != null) {
-//                        화면에서 처리하는 코드가 있음 실행시켜줌
+//                        화면에서 처리하는 코드가 있으면 실행시켜줌
                         handler.onResponse(json);
                     }
 
